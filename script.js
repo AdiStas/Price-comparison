@@ -18,21 +18,24 @@ calculateBtn.addEventListener('click', function() {
 	let secondProductPriceValue = secondProductPrice.value;
 	let secondProductWeightValue = secondProductWeight.value;
 
-	let firstProduct = oneKilogram / firstProductWeightValue * firstProductPriceValue;
-	let secondProduct = oneKilogram / secondProductWeightValue * secondProductPriceValue;
+	let firstProduct = Math.round(oneKilogram / firstProductWeightValue * firstProductPriceValue);
+	let secondProduct = Math.round(oneKilogram / secondProductWeightValue * secondProductPriceValue);
 
 	if (firstProduct > secondProduct) {
+		result.classList.remove('alert-text');
 		result.textContent = "Цена товара №1 за кг: "
 		+ firstProduct.toFixed(2) + " рублей, а цена товара №2 "
 		+ secondProduct.toFixed(2) + ". Выгоднее купить товар №2";
 	} else if (firstProduct < secondProduct) {
+		result.classList.remove('alert-text');
 		result.textContent = "Цена товара №1 за кг: " 
 		+ firstProduct.toFixed(2) + " рублей, а цена товара №2 " 
 		+ secondProduct.toFixed(2) + ". Выгоднее купить товар №1";
-	} else if (firstProductPriceValue === "" || firstProductWeightValue === "" || secondProductPriceValue === "" || secondProductWeightValue) {
+	} else if (firstProductPriceValue === "" || firstProductWeightValue === "" || secondProductPriceValue === "" || secondProductWeightValue === "") {
 		result.classList.add('alert-text');
-		result.textContent = "Не хватает данных для расчета";
+		result.textContent = "Не хватает данных для расчета"; 
 	} else {
+		result.classList.remove('alert-text');
 		result.textContent = "Цена равна, выбирайте который больше нравится";
 	}
 });
