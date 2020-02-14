@@ -70,6 +70,7 @@ input {
 	outline: none;
 	background-color: #f2efdc;
 	border: 2px solid #f2efdc;
+	-webkit-appearance: none;
 }
 
 input:hover {
