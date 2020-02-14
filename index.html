@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Price comparison</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main class="main">
+		<h1 class="main-title">Сервис для сравнения цены за килограмм у двух продуктов</h1>
+		<div class="product__container">
+			<label class="first-product__price--label">Введите цену товара №1:
+				<input type="number" id="first-product__price--input">
+			</label>
+			<label class="first-product__weight--label">Введите вес товара №1 в граммах:
+				<input type="number" id="first-product__weight--input">
+			</label>
+		</div>
+		<div class="product__container">
+			<label class="second-product__price--label">Введите цену товара №2:
+				<input type="number" id="second-product__price--input">
+			</label>
+			<label class="second-product__weight--label">Введите вес товара №2 в граммах:
+				<input type="number" id="second-product__weight--input">
+			</label>
+		</div>
+		<p class="result"></p>
+		<div class="calculator-btn__container">
+			<button type="button" class="btn calculate-btn">Посчитать
+			</button>
+			<button type="button" class="btn reset-btn">Сбросить значения</button>
+		</div>
+	</main>
+
+	<footer>
+		<span>Разработано:</span>
+		<a href="https://adistas.github.io/Portfolio/">
+			<img src="main-logo.svg" width="30" alt="author-logo">
+		</a>
+		<span>©2020</span>
+	</footer>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
